@@ -64,7 +64,7 @@ public:
 
   void SendUpdate(const QRect &rect, int waveform, int flags) const {
     // Method idx == 1
-    QGenericArgument argWaveform("EPFramebuffer::WaveformMode", &waveform);
+    QGenericArgument argWaveform("EPFramebuffer::Waveform", &waveform);
     QGenericArgument argUpdateMode("EPFramebuffer::UpdateFlags", &flags);
     QMetaObject::invokeMethod(instance, "sendUpdate", Qt::DirectConnection,
                               Q_ARG(QRect, rect), argWaveform, argUpdateMode);

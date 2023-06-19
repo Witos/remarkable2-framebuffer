@@ -51,6 +51,7 @@ void doUpdate(SwtFB &fb, const swtfb_update &s) {
   // 8: highlight (same as high fidelity)
 
   int waveform = mxcfb_update.waveform_mode;
+  waveform = waveform == 2 ? 5 : waveform;
   if (waveform > 3 && waveform != 8) {
     waveform = 3;
     fb.ClearGhosting();
